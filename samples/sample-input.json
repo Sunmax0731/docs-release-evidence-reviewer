@@ -1,16 +1,18 @@
 {
   "items": [
     {
-      "id": "docs-review-1",
+      "id": "docs-release-evidence-reviewer-1",
       "title": "Docs・Release・検証証跡・素材レビュー サンプル 1",
+      "status": "ready",
       "documentPath": "docs/requirements.md",
       "releaseNotePath": "docs/release-checklist.md",
       "evidencePath": "docs/manual-test.md",
       "reviewStatus": "reviewed"
     },
     {
-      "id": "docs-review-missing-required",
+      "id": "docs-release-evidence-reviewer-missing-required",
       "title": "必須項目不足サンプル",
+      "status": "ready",
       "releaseNotePath": "docs/release-checklist.md",
       "evidencePath": "docs/manual-test.md",
       "reviewStatus": "reviewed"
