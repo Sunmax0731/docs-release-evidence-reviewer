@@ -1,22 +1,37 @@
 # docs-release-evidence-reviewer
 
-Docs・Release・検証証跡・素材レビュー の MVP リポジトリです。
+Docs/Release証跡レビューアー は、VS Code内でドキュメント、リリースノート、検証証跡の不足を確認する。
 
-## 概要
+## 対象ユーザー
 
-VS Code上でドキュメント、リリースノート、検証証跡の不足を確認する。
+- VS Codeで作業する開発者、テクニカルライター、レビュー担当
 
-## 現在の範囲
+## 主な価値
 
-- 入力データを検査し、必須項目の不足と注意状態をレポート化する。
-- 自動テストで正常系と必須項目不足を検証する。
-- 手動テスト手順は `docs/manual-test.md` にまとめる。
-- 公開前チェックは `docs/release-checklist.md` を基準にする。
+- 必須項目の不足を自動検出します。
+- 手動テスト、導入手順、リリース前確認を同じドキュメント体系で確認できます。
+- 競合プロダクトと公式標準を基準に、QCDSを実装とドキュメントの両方で評価します。
 
-## 検証
+## 使い方
 
 ```powershell
+cd D:\AI\VSCodeExtension\docs-release-evidence-reviewer
 npm test
+code --extensionDevelopmentPath="D:\AI\VSCodeExtension\docs-release-evidence-reviewer"
 ```
 
-Unity パッケージの場合は `tools/test-package-structure.ps1` が構造検証を実行します。
+## ドキュメント
+
+- docs/requirements.md
+- docs/specification.md
+- docs/design.md
+- docs/implementation-plan.md
+- docs/test-plan.md
+- docs/manual-test.md
+- docs/installation-guide.md
+- docs/user-guide.md
+- docs/competitive-benchmark.md
+- docs/evaluation-criteria.md
+- docs/release-checklist.md
+- docs/post-mvp-roadmap.md
+- docs/qcds-evaluation.md

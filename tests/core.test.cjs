@@ -4,8 +4,9 @@ const { analyzeItems, renderMarkdownReport } = require('../src/core.cjs');
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "docs-review-1",
-  "title": "Docs・Release・検証証跡・素材レビュー サンプル 1",
+  "id": "docs-release-evidence-reviewer-1",
+  "title": "Docs/Release証跡レビューアー サンプル1",
+  "status": "ready",
   "documentPath": "docs/requirements.md",
   "releaseNotePath": "docs/release-checklist.md",
   "evidencePath": "docs/manual-test.md",
@@ -17,8 +18,9 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "docs-review-missing-required",
+  "id": "docs-release-evidence-reviewer-missing-required",
   "title": "必須項目不足サンプル",
+  "status": "ready",
   "releaseNotePath": "docs/release-checklist.md",
   "evidencePath": "docs/manual-test.md",
   "reviewStatus": "reviewed"

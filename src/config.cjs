@@ -1,7 +1,7 @@
 const productConfig = {
   "repo": "docs-release-evidence-reviewer",
-  "titleJa": "Docs・Release・検証証跡・素材レビュー",
-  "summary": "VS Code内のリリース証跡レビュー",
+  "titleJa": "Docs/Release証跡レビューアー",
+  "summary": "VS Code内でドキュメント、リリースノート、検証証跡の不足を確認する。",
   "requiredFields": [
     "documentPath",
     "releaseNotePath",

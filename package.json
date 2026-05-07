@@ -1,10 +1,10 @@
 {
   "name": "docs-release-evidence-reviewer",
-  "displayName": "Docs・Release・検証証跡・素材レビュー",
+  "displayName": "Docs/Release証跡レビューアー",
   "version": "0.1.0",
   "publisher": "sunmax0731",
   "private": false,
-  "description": "VS Code上でドキュメント、リリースノート、検証証跡の不足を確認する。",
+  "description": "VS Code内でドキュメント、リリースノート、検証証跡の不足を確認する。",
   "main": "./extension.js",
   "engines": {
     "vscode": "^1.90.0"
@@ -16,7 +16,7 @@
     "commands": [
       {
         "command": "docs-release-evidence-reviewer.openReview",
-        "title": "Docs・Release・検証証跡・素材レビュー: レビューを開く"
+        "title": "Docs/Release証跡レビューアー: レビューを開く"
       }
     ]
   },
@@ -25,5 +25,10 @@
     "validate": "npm test"
   },
   "devDependencies": {},
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "vscodeextension",
+    "qcds",
+    "pre-release"
+  ]
 }
