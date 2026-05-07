@@ -36,7 +36,7 @@ Overall: S+ (100)
 - [x] ローカル実行手順がある - ok
 - [x] 代表サンプルがある - ok
 - [x] 機械可読metricsが生成される - metrics generated
-- [x] docs ZIPが生成済みである - docs-release-evidence-reviewer-docs.zip 10102 bytes
+- [x] docs ZIPが生成済みである - docs-release-evidence-reviewer-docs.zip exists and exceeds minimum size
 
 ### Delivery
 

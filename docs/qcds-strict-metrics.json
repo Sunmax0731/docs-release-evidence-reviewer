@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "docs-release-evidence-reviewer-docs.zip 10102 bytes"
+          "detail": "docs-release-evidence-reviewer-docs.zip exists and exceeds minimum size"
         }
       ]
     },
