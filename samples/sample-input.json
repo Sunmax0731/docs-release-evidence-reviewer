@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "docs-review-1",
+      "title": "Docs・Release・検証証跡・素材レビュー サンプル 1",
+      "documentPath": "docs/requirements.md",
+      "releaseNotePath": "docs/release-checklist.md",
+      "evidencePath": "docs/manual-test.md",
+      "reviewStatus": "reviewed"
+    },
+    {
+      "id": "docs-review-missing-required",
+      "title": "必須項目不足サンプル",
+      "releaseNotePath": "docs/release-checklist.md",
+      "evidencePath": "docs/manual-test.md",
+      "reviewStatus": "reviewed"
+    }
+  ]
+}
