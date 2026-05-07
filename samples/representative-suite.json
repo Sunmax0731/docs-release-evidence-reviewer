@@ -1,0 +1,120 @@
+{
+  "product": "docs-release-evidence-reviewer",
+  "title": "Docs/Release証跡レビューアー",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "documentPath",
+    "releaseNotePath",
+    "evidencePath",
+    "reviewStatus"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "VS Code内の文書、リリースノート、検証証跡レビューの正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "docs-release-evidence-reviewer-happy",
+            "title": "Docs/Release証跡レビューアー happy",
+            "documentPath": "docs/requirements.md",
+            "releaseNotePath": "docs/release-checklist.md",
+            "evidencePath": "docs/manual-test.md",
+            "reviewStatus": "reviewed",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "docs-release-evidence-reviewer-missing-required",
+            "title": "Docs/Release証跡レビューアー missing-required",
+            "releaseNotePath": "docs/release-checklist.md",
+            "evidencePath": "docs/manual-test.md",
+            "reviewStatus": "reviewed",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "docs-release-evidence-reviewer-blocked",
+            "title": "Docs/Release証跡レビューアー blocked",
+            "documentPath": "docs/requirements.md",
+            "releaseNotePath": "docs/release-checklist.md",
+            "evidencePath": "docs/manual-test.md",
+            "reviewStatus": "reviewed",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "docs-release-evidence-reviewer-happy",
+            "title": "Docs/Release証跡レビューアー happy",
+            "documentPath": "docs/requirements.md",
+            "releaseNotePath": "docs/release-checklist.md",
+            "evidencePath": "docs/manual-test.md",
+            "reviewStatus": "reviewed",
+            "status": "ready"
+          },
+          {
+            "id": "docs-release-evidence-reviewer-missing-required",
+            "title": "Docs/Release証跡レビューアー missing-required",
+            "releaseNotePath": "docs/release-checklist.md",
+            "evidencePath": "docs/manual-test.md",
+            "reviewStatus": "reviewed",
+            "status": "ready"
+          },
+          {
+            "id": "docs-release-evidence-reviewer-blocked",
+            "title": "Docs/Release証跡レビューアー blocked",
+            "documentPath": "docs/requirements.md",
+            "releaseNotePath": "docs/release-checklist.md",
+            "evidencePath": "docs/manual-test.md",
+            "reviewStatus": "reviewed",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
