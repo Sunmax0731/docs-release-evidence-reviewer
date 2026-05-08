@@ -1,0 +1,11 @@
+{
+  "product": "docs-release-evidence-reviewer",
+  "title": "Docs・Release・検証証跡・素材レビュー",
+  "domain": "VSCodeExtension",
+  "ideaNo": 2,
+  "platformType": "vscode-extension",
+  "expectedPublicTarget": "GitHub Release / VSIX",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
